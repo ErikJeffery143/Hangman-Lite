@@ -78,11 +78,11 @@
             // 
             this.lblWord.AutoSize = true;
             this.lblWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWord.Location = new System.Drawing.Point(75, 352);
+            this.lblWord.Location = new System.Drawing.Point(97, 350);
             this.lblWord.Name = "lblWord";
-            this.lblWord.Size = new System.Drawing.Size(151, 33);
+            this.lblWord.Size = new System.Drawing.Size(111, 33);
             this.lblWord.TabIndex = 4;
-            this.lblWord.Text = "_ _ _ _ _ _";
+            this.lblWord.Text = "______";
             // 
             // lblHint
             // 

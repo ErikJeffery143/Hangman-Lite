@@ -14,7 +14,7 @@ namespace Hangman_Lite
     {
         string word = "ZEPHYR";
         int lives = 5;
-        string displayWord = "_ _ _ _ _ _";
+        string displayWord = "______";
         List<string> Guesses = new List<string>();
         public frmHangman()
         {
@@ -71,15 +71,31 @@ namespace Hangman_Lite
         }
 
         private void btnGuess_Click(object sender, EventArgs e)
-        {
-            Guesses.Add((string)txtGuess.Text.ToUpper());
+        { 
+            
+            txtGuess.Text = txtGuess.Text.ToUpper();
+            int index = word.IndexOf(txtGuess.Text);
+            if (word.IndexOf(txtGuess.Text) != -1)
+            {
+                displayWord = displayWord.Remove(index, 1);
+                lblWord.Text = displayWord;
+                displayWord = displayWord.Insert(index,txtGuess.Text);
+                lblWord.Text = displayWord;
+            }
+            else if (Guesses.Contains(txtGuess.Text))
+            {
 
-            lstGuessedLetters.DataSource = null;
-            lstGuessedLetters.DataSource = Guesses;
-
-           
-
-
+            }
+            else
+            {
+                Guesses.Add(txtGuess.Text);
+                lstGuessedLetters.DataSource = null;
+                lstGuessedLetters.DataSource = Guesses;
+                lives = lives - 1;
+                lblLives.Text = "Lives:" + lives;
+            }
+            
+            
 
 
             if (lives == 2)
@@ -113,25 +129,6 @@ namespace Hangman_Lite
                 this.Close();
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
