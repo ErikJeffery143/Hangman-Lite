@@ -37,30 +37,31 @@
             this.lblLives = new System.Windows.Forms.Label();
             this.lblUsedLetters = new System.Windows.Forms.Label();
             this.btnHint = new System.Windows.Forms.Button();
+            this.btnEnd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHangman)).BeginInit();
             this.SuspendLayout();
             // 
             // picHangman
             // 
             this.picHangman.Image = global::Hangman_Lite.Properties.Resources._5balloon;
-            this.picHangman.Location = new System.Drawing.Point(12, 10);
+            this.picHangman.Location = new System.Drawing.Point(12, 12);
             this.picHangman.Name = "picHangman";
-            this.picHangman.Size = new System.Drawing.Size(128, 228);
+            this.picHangman.Size = new System.Drawing.Size(127, 214);
             this.picHangman.TabIndex = 0;
             this.picHangman.TabStop = false;
             // 
             // txtGuess
             // 
-            this.txtGuess.Location = new System.Drawing.Point(175, 166);
+            this.txtGuess.Location = new System.Drawing.Point(179, 147);
             this.txtGuess.Name = "txtGuess";
-            this.txtGuess.Size = new System.Drawing.Size(51, 20);
+            this.txtGuess.Size = new System.Drawing.Size(58, 20);
             this.txtGuess.TabIndex = 1;
             // 
             // btnGuess
             // 
-            this.btnGuess.Location = new System.Drawing.Point(220, 163);
+            this.btnGuess.Location = new System.Drawing.Point(243, 148);
             this.btnGuess.Name = "btnGuess";
-            this.btnGuess.Size = new System.Drawing.Size(75, 23);
+            this.btnGuess.Size = new System.Drawing.Size(75, 19);
             this.btnGuess.TabIndex = 2;
             this.btnGuess.Text = "Guess";
             this.btnGuess.UseVisualStyleBackColor = true;
@@ -69,16 +70,17 @@
             // lstGuessedLetters
             // 
             this.lstGuessedLetters.FormattingEnabled = true;
-            this.lstGuessedLetters.Location = new System.Drawing.Point(175, 36);
+            this.lstGuessedLetters.ItemHeight = 11;
+            this.lstGuessedLetters.Location = new System.Drawing.Point(179, 37);
             this.lstGuessedLetters.Name = "lstGuessedLetters";
-            this.lstGuessedLetters.Size = new System.Drawing.Size(120, 121);
+            this.lstGuessedLetters.Size = new System.Drawing.Size(139, 103);
             this.lstGuessedLetters.TabIndex = 3;
             // 
             // lblWord
             // 
             this.lblWord.AutoSize = true;
             this.lblWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWord.Location = new System.Drawing.Point(97, 350);
+            this.lblWord.Location = new System.Drawing.Point(88, 303);
             this.lblWord.Name = "lblWord";
             this.lblWord.Size = new System.Drawing.Size(111, 33);
             this.lblWord.TabIndex = 4;
@@ -88,7 +90,7 @@
             // 
             this.lblHint.AutoSize = true;
             this.lblHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHint.Location = new System.Drawing.Point(65, 296);
+            this.lblHint.Location = new System.Drawing.Point(131, 258);
             this.lblHint.Name = "lblHint";
             this.lblHint.Size = new System.Drawing.Size(184, 24);
             this.lblHint.TabIndex = 6;
@@ -98,7 +100,7 @@
             // 
             this.lblLives.AutoSize = true;
             this.lblLives.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLives.Location = new System.Drawing.Point(7, 243);
+            this.lblLives.Location = new System.Drawing.Point(7, 229);
             this.lblLives.Name = "lblLives";
             this.lblLives.Size = new System.Drawing.Size(87, 25);
             this.lblLives.TabIndex = 7;
@@ -108,7 +110,7 @@
             // 
             this.lblUsedLetters.AutoSize = true;
             this.lblUsedLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsedLetters.Location = new System.Drawing.Point(170, 10);
+            this.lblUsedLetters.Location = new System.Drawing.Point(181, 16);
             this.lblUsedLetters.Name = "lblUsedLetters";
             this.lblUsedLetters.Size = new System.Drawing.Size(134, 25);
             this.lblUsedLetters.TabIndex = 8;
@@ -116,20 +118,31 @@
             // 
             // btnHint
             // 
-            this.btnHint.Location = new System.Drawing.Point(103, 270);
+            this.btnHint.Location = new System.Drawing.Point(135, 236);
             this.btnHint.Name = "btnHint";
-            this.btnHint.Size = new System.Drawing.Size(105, 23);
+            this.btnHint.Size = new System.Drawing.Size(122, 19);
             this.btnHint.TabIndex = 9;
             this.btnHint.Text = "HINT:Cost 2 lives";
             this.btnHint.UseVisualStyleBackColor = true;
             this.btnHint.Click += new System.EventHandler(this.btnHint_Click);
             // 
+            // btnEnd
+            // 
+            this.btnEnd.Location = new System.Drawing.Point(7, 362);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(87, 19);
+            this.btnEnd.TabIndex = 10;
+            this.btnEnd.Text = "CLOSE";
+            this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
+            // 
             // frmHangman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 11F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(303, 465);
+            this.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.ClientSize = new System.Drawing.Size(318, 393);
+            this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.btnHint);
             this.Controls.Add(this.lblUsedLetters);
             this.Controls.Add(this.lblLives);
@@ -139,6 +152,8 @@
             this.Controls.Add(this.btnGuess);
             this.Controls.Add(this.txtGuess);
             this.Controls.Add(this.picHangman);
+            this.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Navy;
             this.Name = "frmHangman";
             this.Text = "Hangman_Lite";
             this.Load += new System.EventHandler(this.frmHangman_Load);
@@ -159,6 +174,7 @@
         private System.Windows.Forms.Label lblLives;
         private System.Windows.Forms.Label lblUsedLetters;
         private System.Windows.Forms.Button btnHint;
+        private System.Windows.Forms.Button btnEnd;
     }
 }
 

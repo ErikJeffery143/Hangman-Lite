@@ -133,5 +133,10 @@ namespace Hangman_Lite
 
 
         }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
